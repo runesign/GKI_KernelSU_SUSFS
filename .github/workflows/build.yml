@@ -1036,6 +1036,13 @@ jobs:
           enable_config_if_defined CONFIG_NETFILTER_XT_TARGET_REJECT
           enable_config_if_defined CONFIG_IP_NF_TARGET_REJECT
 
+          # 可选: Droidspaces 扩展网络与资源限制支持 (Macvlan / IPv6 NAT / CPU 限额 / 进程数限制)
+          enable_config_if_defined CONFIG_MACVLAN
+          enable_config_if_defined CONFIG_IP6_NF_NAT
+          enable_config_if_defined CONFIG_IP6_NF_TARGET_MASQUERADE
+          enable_config_if_defined CONFIG_CFS_BANDWIDTH
+          enable_config_if_defined CONFIG_CGROUP_PIDS
+
           echo "Droidspaces 集成完成"
 
           echo "GKI6.6 普通用户联网专用配置 (Droidspaces)"
